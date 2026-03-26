@@ -1,18 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CV</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            margin-top: 100px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khang DO PHAN</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: white;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px;
+        background: #020617;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav a {
+        margin-left: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 120px 20px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        color: #94a3b8;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .section {
+        padding: 80px 50px;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: #020617;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #020617;
+    }
+</style>
 </head>
+
 <body>
-    <h1>DO PHAN Bao Khang</h1>
+
+<header>
+    <h1>Khang</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Hi, I'm Khang 👋</h2>
     <p>Data Scientist / AI Engineer</p>
-    <p>Welcome to my website 🚀</p>
+    <button class="btn">View my work</button>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>AI Project</h3>
+            <p>Machine learning model project</p>
+        </div>
+        <div class="card">
+            <h3>Web App</h3>
+            <p>React / Fullstack app</p>
+        </div>
+        <div class="card">
+            <h3>Data Analysis</h3>
+            <p>Data visualization project</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: dophanbaokhang@gmail.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Khang DO PHAN</p>
+</footer>
+
 </body>
 </html>
