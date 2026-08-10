@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DO PHAN Bao Khang</title>
+<title>DO PHAN Bao Khang | Data Scientist</title>
 
 <style>
 body {
@@ -13,10 +14,10 @@ body {
     color: white;
 }
 
-/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 10%;
     background: #020617;
 }
@@ -27,17 +28,21 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #60a5fa;
+}
+
 /* HERO */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 80px 10%;
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 .hero-text {
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .badge {
@@ -71,11 +76,14 @@ nav a {
 }
 
 .btn {
+    display: inline-block;
     padding: 14px 24px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     margin-right: 10px;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .btn-primary {
@@ -87,6 +95,10 @@ nav a {
     background: #0f172a;
     border: 1px solid #334155;
     color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 /* IMAGE */
@@ -103,16 +115,65 @@ nav a {
     padding: 80px 10%;
 }
 
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* PROJECTS */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .card {
     background: #020617;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #1e293b;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+.card h3 {
+    color: #60a5fa;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.tech {
+    margin-top: 15px;
+    color: #93c5fd;
+    font-size: 14px;
+}
+
+/* CONTACT */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    color: white;
+    text-decoration: none;
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.contact-links a:hover {
+    background: #1e3a8a;
 }
 
 /* FOOTER */
@@ -120,6 +181,7 @@ footer {
     text-align: center;
     padding: 20px;
     background: #020617;
+    color: #94a3b8;
 }
 
 /* RESPONSIVE */
@@ -136,14 +198,20 @@ footer {
     .hero-img {
         margin-top: 40px;
     }
+
+    .contact-links {
+        justify-content: center;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
     <h1>Khang</h1>
+
     <nav>
         <a href="#">Home</a>
         <a href="#projects">Projects</a>
@@ -151,11 +219,15 @@ footer {
     </nav>
 </header>
 
+
 <!-- HERO -->
 <section class="hero">
 
     <div class="hero-text">
-        <div class="badge">DISPONIBLE • DATA / ML ENGINEER</div>
+
+        <div class="badge">
+            AVAILABLE • DATA / ML ENGINEER
+        </div>
 
         <h2>DO PHAN Bao Khang</h2>
 
@@ -164,56 +236,230 @@ footer {
         </div>
 
         <p class="description">
-            I build ML systems and full-stack applications with real impact. 
-            Experience with deep learning, data pipelines, and scalable apps.
+            I build machine learning systems, data pipelines and
+            software applications with a focus on practical and
+            impactful solutions. My experience includes deep learning,
+            computer vision, data analysis and full-stack development.
         </p>
 
         <div class="buttons">
-            <button class="btn btn-primary"
-                onclick="window.location.href='mailto:dophanbaokhang@gmail.com'">
-                Me contacter
-            </button>
 
-            <button class="btn btn-dark">
-                Télécharger CV
-            </button>
+            <!-- EMAIL -->
+            <a
+                class="btn btn-primary"
+                href="mailto:dophanbaokhang@gmail.com?subject=Contact%20from%20your%20portfolio"
+            >
+                📧 Me contacter
+            </a>
+
+            <!-- DOWNLOAD CV -->
+            <a
+                class="btn btn-dark"
+                href="BaoKhangDOPHAN_CV.pdf"
+                download
+            >
+                📄 Télécharger CV en
+            </a>
+            <a
+                class="btn btn-dark"
+                href="BaoKhangDOPHAN_CV_fr_it.pdf"
+                download
+            >
+                📄 Télécharger CV fr
+            </a>
+
         </div>
+
     </div>
 
+
     <div class="hero-img">
-        <img src="image.png" alt="profile">
+        <img src="image.png" alt="DO PHAN Bao Khang">
     </div>
 
 </section>
+
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
-    <h2>Projects</h2>
+
+    <h2 class="section-title">
+        Projects
+    </h2>
+
     <div class="projects">
+
+        <!-- PROJECT 1 -->
         <div class="card">
-            <h3>AI Project</h3>
-            <p>Machine learning model project</p>
+
+            <h3>
+                🧠 Cryo-ET Object Identification
+            </h3>
+
+            <p>
+                Developed a deep learning pipeline for object
+                identification and segmentation in cryo-electron
+                tomography data. Used synthetic data and a UNet-based
+                architecture to detect biological structures.
+            </p>
+
+            <div class="tech">
+                Python • PyTorch • MONAI • UNet • Deep Learning
+            </div>
+
         </div>
+
+
+        <!-- PROJECT 2 -->
         <div class="card">
-            <h3>Web App</h3>
-            <p>React / Fullstack app</p>
+
+            <h3>
+                🛒 Customer Purchase Prediction
+            </h3>
+
+            <p>
+                Built a recommendation system to predict the top
+                products most likely to be repurchased by customers
+                using historical transaction and product data.
+            </p>
+
+            <div class="tech">
+                Python • Pandas • Machine Learning • Recommendation
+            </div>
+
         </div>
+
+
+        <!-- PROJECT 3 -->
         <div class="card">
-            <h3>Data Analysis</h3>
-            <p>Data visualization project</p>
+
+            <h3>
+                👕 Fashion MNIST Classification
+            </h3>
+
+            <p>
+                Experimented with MLP and CNN architectures for image
+                classification, comparing model complexity,
+                regularization and performance.
+            </p>
+
+            <div class="tech">
+                Python • PyTorch • CNN • MLP • Computer Vision
+            </div>
+
         </div>
+
+
+        <!-- PROJECT 4 -->
+        <div class="card">
+
+            <h3>
+                🌐 Domain Adaptation
+            </h3>
+
+            <p>
+                Implemented Subspace Alignment for domain adaptation
+                between Webcam and DSLR image domains using the
+                Office/Caltech dataset.
+            </p>
+
+            <div class="tech">
+                Python • Machine Learning • Computer Vision
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+        <div class="card">
+
+            <h3>
+                🤖 Qwen Vision-Language Fine-Tuning
+            </h3>
+
+            <p>
+                Worked on fine-tuning Qwen2.5-VL models for
+                vision-language tasks, including training optimization,
+                evaluation metrics and reward functions.
+            </p>
+
+            <div class="tech">
+                Python • PyTorch • Qwen2.5-VL • Transformers • CUDA
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 6 -->
+        <div class="card">
+
+            <h3>
+                📊 Sports Event Probabilistic Modeling
+            </h3>
+
+            <p>
+                Developed probabilistic models for analyzing sports
+                event data, participant performance and race evolution
+                using supervised and unsupervised approaches.
+            </p>
+
+            <div class="tech">
+                Python • PyMC • Bayesian Modeling • Data Analysis
+            </div>
+
+        </div>
+
     </div>
+
 </section>
+
 
 <!-- CONTACT -->
 <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: dophanbaokhang@gmail.com</p>
+
+    <h2 class="section-title">
+        Contact
+    </h2>
+
+    <p>
+        Interested in working together? Feel free to contact me.
+    </p>
+
+    <div class="contact-links">
+
+        <!-- EMAIL -->
+        <a href="mailto:dophanbaokhang@gmail.com">
+            📧 Email
+        </a>
+
+        <!-- LINKEDIN -->
+        <a
+            href="https://www.linkedin.com/in/do-phan-bao-khang-21a885188/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            💼 LinkedIn
+        </a>
+
+        <!-- GITHUB -->
+        <a
+            href="https://github.com/DOPHANK"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            💻 GitHub
+        </a>
+
+    </div>
+
 </section>
 
+
+<!-- FOOTER -->
 <footer>
     <p>© 2026 DO PHAN Bao Khang</p>
 </footer>
 
 </body>
 </html>
+```
