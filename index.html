@@ -119,39 +119,117 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-/* PROJECTS */
+/* PROJECT CARDS */
+
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 25px;
 }
 
 .card {
-    background: #020617;
-    padding: 25px;
-    border-radius: 15px;
+    background: linear-gradient(
+        145deg,
+        #020617,
+        #0f172a
+    );
+
+    padding: 28px;
+    border-radius: 16px;
+
     border: 1px solid #1e293b;
-    transition: 0.3s;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
     border-color: #3b82f6;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
 }
 
-.card h3 {
+
+/* PROJECT CATEGORY */
+
+.project-category {
+    display: inline-block;
+
     color: #60a5fa;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
 }
+
+
+/* PROJECT TITLE */
+
+.card h3 {
+    font-size: 23px;
+    margin: 5px 0 15px;
+}
+
+
+/* PROJECT DESCRIPTION */
 
 .card p {
     color: #cbd5e1;
-    line-height: 1.6;
+
+    line-height: 1.65;
+
+    font-size: 15px;
 }
 
-.tech {
-    margin-top: 15px;
-    color: #93c5fd;
+
+/* WHAT I DID */
+
+.skills-title {
+    margin-top: 22px;
+
+    font-weight: bold;
+
+    color: white;
+
     font-size: 14px;
+}
+
+.card ul {
+    padding-left: 20px;
+
+    color: #cbd5e1;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.card li {
+    margin-bottom: 5px;
+}
+
+
+/* TECHNOLOGIES */
+
+.tech {
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #1e293b;
+
+    color: #93c5fd;
+
+    font-size: 13px;
+
+    line-height: 1.6;
 }
 
 /* CONTACT */
@@ -270,132 +348,189 @@ footer {
 
 </section>
 
-
 <!-- PROJECTS -->
 <section id="projects" class="section">
 
-    <h2 class="section-title">
-        Projects
-    </h2>
+    <h2 class="section-title">Technical Projects & Experience</h2>
 
     <div class="projects">
 
-        <!-- PROJECT 1 -->
+        <!-- OCR -->
         <div class="card">
 
-            <h3>
-                🧠 Cryo-ET Object Identification
-            </h3>
+            <span class="project-category">AI ENGINEERING · OCR</span>
+
+            <h3>Medical Report OCR Pipeline</h3>
 
             <p>
-                Developed a deep learning pipeline for object
-                identification and segmentation in cryo-electron
-                tomography data. Used synthetic data and a UNet-based
-                architecture to detect biological structures.
+                Designed and developed a Python pipeline to automate the
+                digitization of medical report forms using OCR and AI models.
+                Worked on data processing, pipeline automation and integration
+                of AI components into the workflow.
             </p>
 
+            <div class="skills-title">What I did</div>
+
+            <ul>
+                <li>Developed Python data-processing scripts</li>
+                <li>Built an automated OCR pipeline</li>
+                <li>Integrated AI / LMM models</li>
+                <li>Worked in a Linux environment</li>
+                <li>Automated repetitive processing tasks</li>
+            </ul>
+
             <div class="tech">
-                Python • PyTorch • MONAI • UNet • Deep Learning
+                Python · OCR · LMM · Linux · Automation · Data Pipelines
             </div>
 
         </div>
 
 
-        <!-- PROJECT 2 -->
+        <!-- BIOMEDICAL IMAGE ANALYSIS -->
         <div class="card">
 
-            <h3>
-                🛒 Customer Purchase Prediction
-            </h3>
+            <span class="project-category">COMPUTER VISION · DEEP LEARNING</span>
+
+            <h3>Biomedical Image Analysis</h3>
 
             <p>
-                Built a recommendation system to predict the top
-                products most likely to be repurchased by customers
-                using historical transaction and product data.
+                Developed image-processing and deep-learning approaches for
+                identifying protein complexes in tomographic biomedical images.
+                The project achieved a Top 20 result in a Kaggle competition.
             </p>
 
+            <div class="skills-title">What I did</div>
+
+            <ul>
+                <li>Processed tomographic image data</li>
+                <li>Developed CNN-based approaches</li>
+                <li>Worked on image segmentation / identification</li>
+                <li>Evaluated model performance</li>
+                <li>Experimented with deep-learning architectures</li>
+            </ul>
+
             <div class="tech">
-                Python • Pandas • Machine Learning • Recommendation
+                Python · PyTorch · CNNs · MONAI · Computer Vision
             </div>
 
         </div>
 
 
-        <!-- PROJECT 3 -->
+        <!-- PREDICTIVE ANALYSIS -->
         <div class="card">
 
-            <h3>
-                👕 Fashion MNIST Classification
-            </h3>
+            <span class="project-category">DATA SCIENCE · MACHINE LEARNING</span>
+
+            <h3>Customer Purchase Prediction</h3>
 
             <p>
-                Experimented with MLP and CNN architectures for image
-                classification, comparing model complexity,
-                regularization and performance.
+                Built a predictive data pipeline to identify which products
+                customers were likely to repurchase in the future using
+                historical transaction and product data.
             </p>
 
+            <div class="skills-title">What I did</div>
+
+            <ul>
+                <li>Prepared and cleaned transaction data</li>
+                <li>Performed exploratory data analysis</li>
+                <li>Built automated data-processing pipelines</li>
+                <li>Trained and evaluated predictive models</li>
+                <li>Analyzed model results and performance</li>
+            </ul>
+
             <div class="tech">
-                Python • PyTorch • CNN • MLP • Computer Vision
+                Python · Pandas · NumPy · Machine Learning · Data Analysis
             </div>
 
         </div>
 
 
-        <!-- PROJECT 4 -->
+        <!-- 3D FACE -->
         <div class="card">
 
-            <h3>
-                🌐 Domain Adaptation
-            </h3>
+            <span class="project-category">COMPUTER VISION · 3D AI</span>
+
+            <h3>3D Facial Recognition</h3>
 
             <p>
-                Implemented Subspace Alignment for domain adaptation
-                between Webcam and DSLR image domains using the
-                Office/Caltech dataset.
+                Developed a facial-recognition system using 3D facial data,
+                combining deep-learning models with 3D data augmentation
+                techniques.
             </p>
 
+            <div class="skills-title">What I did</div>
+
+            <ul>
+                <li>Developed facial-recognition models with PyTorch</li>
+                <li>Processed 3D facial data</li>
+                <li>Implemented data augmentation techniques</li>
+                <li>Worked with MTCNN for face detection</li>
+                <li>Used Deep3DFaceReconstruction</li>
+                <li>Experimented with CNN / ArcFace approaches</li>
+            </ul>
+
             <div class="tech">
-                Python • Machine Learning • Computer Vision
+                Python · PyTorch · CNNs · MTCNN · ArcFace · 3D Vision
             </div>
 
         </div>
 
 
-        <!-- PROJECT 5 -->
+        <!-- FACIAL EXPRESSION -->
         <div class="card">
 
-            <h3>
-                🤖 Qwen Vision-Language Fine-Tuning
-            </h3>
+            <span class="project-category">DEEP LEARNING · CLASSIFICATION</span>
+
+            <h3>Facial Expression Analysis</h3>
 
             <p>
-                Worked on fine-tuning Qwen2.5-VL models for
-                vision-language tasks, including training optimization,
-                evaluation metrics and reward functions.
+                Developed machine-learning approaches for facial-expression
+                classification using convolutional neural networks and
+                classical machine-learning methods.
             </p>
 
+            <div class="skills-title">What I did</div>
+
+            <ul>
+                <li>Prepared facial-image datasets</li>
+                <li>Trained CNN models</li>
+                <li>Compared deep-learning approaches</li>
+                <li>Experimented with k-NN and Decision Trees</li>
+                <li>Evaluated classification performance</li>
+            </ul>
+
             <div class="tech">
-                Python • PyTorch • Qwen2.5-VL • Transformers • CUDA
+                Python · PyTorch · TensorFlow/Keras · CNNs · k-NN · Decision Trees
             </div>
 
         </div>
 
 
-        <!-- PROJECT 6 -->
+        <!-- MULTIPLAYER GAME -->
         <div class="card">
 
-            <h3>
-                📊 Sports Event Probabilistic Modeling
-            </h3>
+            <span class="project-category">SOFTWARE ENGINEERING · REAL-TIME</span>
+
+            <h3>Real-Time Multiplayer 3D Game</h3>
 
             <p>
-                Developed probabilistic models for analyzing sports
-                event data, participant performance and race evolution
-                using supervised and unsupervised approaches.
+                Developed a real-time multiplayer 3D game with a connected
+                server architecture, supporting multiple simultaneous players.
             </p>
 
+            <div class="skills-title">What I did</div>
+
+            <ul>
+                <li>Developed the 3D game using JavaScript</li>
+                <li>Implemented real-time multiplayer communication</li>
+                <li>Developed the connected server</li>
+                <li>Worked with Socket.io</li>
+                <li>Built application-level networking logic</li>
+            </ul>
+
             <div class="tech">
-                Python • PyMC • Bayesian Modeling • Data Analysis
+                JavaScript · PlayCanvas · Socket.io · 3D · Real-Time Applications
             </div>
 
         </div>
@@ -404,48 +539,90 @@ footer {
 
 </section>
 
+<!-- WHAT I CAN DO -->
+<section class="section">
 
-<!-- CONTACT -->
-<section id="contact" class="section">
+    <h2 class="section-title">What I Can Do</h2>
 
-    <h2 class="section-title">
-        Contact
-    </h2>
+    <div class="projects">
 
-    <p>
-        Interested in working together? Feel free to contact me.
-    </p>
+        <div class="card">
+            <h3>🐍 Python Development</h3>
+            <p>
+                Develop Python applications, data-processing scripts,
+                automation tools and reusable pipelines for AI and
+                data-oriented workflows.
+            </p>
+            <div class="tech">
+                Python · Pandas · NumPy · Git
+            </div>
+        </div>
 
-    <div class="contact-links">
 
-        <!-- EMAIL -->
-        <a href="mailto:dophanbaokhang@gmail.com">
-            📧 Email
-        </a>
+        <div class="card">
+            <h3>🤖 Machine Learning & AI</h3>
+            <p>
+                Build, train and evaluate machine-learning and deep-learning
+                models for classification, prediction and computer-vision
+                applications.
+            </p>
+            <div class="tech">
+                PyTorch · TensorFlow/Keras · CNNs · LLMs · LMMs
+            </div>
+        </div>
 
-        <!-- LINKEDIN -->
-        <a
-            href="https://www.linkedin.com/in/do-phan-bao-khang-21a885188/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            💼 LinkedIn
-        </a>
 
-        <!-- GITHUB -->
-        <a
-            href="https://github.com/DOPHANK"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            💻 GitHub
-        </a>
+        <div class="card">
+            <h3>👁️ Computer Vision</h3>
+            <p>
+                Work with image and 3D data for facial recognition,
+                biomedical imaging, OCR and other computer-vision tasks.
+            </p>
+            <div class="tech">
+                CNNs · MTCNN · ArcFace · MONAI · Image Processing
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h3>⚙️ Data Pipelines & Automation</h3>
+            <p>
+                Design automated data-processing workflows, prepare datasets,
+                integrate AI models and reduce repetitive manual processing.
+            </p>
+            <div class="tech">
+                Python · Pandas · Automation · Linux · Data Pipelines
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h3>🛠️ Software Engineering</h3>
+            <p>
+                Develop applications and backend components, manage code with
+                Git and work in Linux-based development environments.
+            </p>
+            <div class="tech">
+                Git · Linux · JavaScript · Java · C · Docker
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h3>🌐 Application Development</h3>
+            <p>
+                Build web and real-time applications, including multiplayer
+                systems and connected client-server applications.
+            </p>
+            <div class="tech">
+                HTML · CSS · JavaScript · PHP · Socket.io
+            </div>
+        </div>
 
     </div>
 
 </section>
-
-
+    
 <!-- FOOTER -->
 <footer>
     <p>© 2026 DO PHAN Bao Khang</p>
