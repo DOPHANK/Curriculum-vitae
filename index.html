@@ -13,6 +13,37 @@ body {
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 10%;
+
+    background: rgba(2, 6, 23, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 1000;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+    
+/*
 header {
     display: flex;
     justify-content: space-between;
@@ -20,7 +51,7 @@ header {
     padding: 20px 10%;
     background: #020617;
 }
-
+*/
 nav a {
     margin-left: 20px;
     color: white;
@@ -38,6 +69,7 @@ nav a:hover {
     justify-content: space-between;
     padding: 80px 10%;
     min-height: 80vh;
+    padding-top: 140px;
 }
 
 .hero-text {
